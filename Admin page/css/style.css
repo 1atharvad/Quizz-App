@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+}
+
+footer, header {
+    background-color: black;
+    color: white;
+}
+
+/* Jumbotron Background Image */
+
+.jumbotron-bk-image {
+    background: linear-gradient(rgba(91, 206, 221, 0.3), rgba(18, 60, 99, 0.8));
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-size: 100% 100%;
+    color: white;
+    border-radius: 0;
+}
+
+/* For Error Card */
+
+.error-card {
+    margin: 10px 20%;
+}
+
+/* For Question Card */
+
+.questions {
+    margin: 10px 8%;
+    cursor: pointer;
+}
+
+#question-id {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    margin: 0;
+}
+
+/* For modal content */
+.modal-question {
+    font-size: 19px;
+    text-align: justify;
+    font-weight: normal;
+}
+
+.modal-options {
+    margin: 20px auto;
+}
+
+.modal-options .modal-option {
+    border: 2px solid rgb(40, 68, 196);
+    color: rgb(40, 68, 196);
+    font-size: 20px;
+}
+
+.modal-options .correct-option {
+    border: 2px solid rgb(16, 112, 16);
+    color: rgb(16, 112, 16);
+    font-size: 20px;
+}
+
+@media screen and (max-width: 650px) {
+    .error-card {
+        margin: 10px 10%;
+    }
+}

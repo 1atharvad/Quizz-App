@@ -1,0 +1,34 @@
+
+  "admin": {
+    "categories": {
+      "The Solar System": [
+        {
+          "id": 1,
+          "question": "In 2007, Voyager 2 crossed the heliosheath boundary and into the vast region at the edge of our solar system where the solar wind runs up against the thin gas between the stars. What did this crossing confirm about the shape of our solar system?",
+          "options": [
+            {
+              "id": 1,
+              "option": "It’s round"
+            },
+            {
+              "id": 2,
+              "option": "It’s squashed"
+            },
+            {
+              "id": 3,
+              "option": "It’s like a donut"
+            },
+            {
+              "id": 4,
+              "option": "It’s a horseshoe shape"
+            }
+          ],
+          "correct-option": 2
+        },
+        {
+          "id": 2
+        }
+      ]
+    }
+  }
+}
