@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "email": "xyz@gmail.com",
+      "password": "asdf1234",
+      "phone": "8458956152",
+      "category": "{\"Sports\":[{\"score\":8,\"date\":\"12/10/2020\"},{\"score\":10,\"date\":\"05/07/2018\"}],\"Space\":[{\"score\":8,\"date\":\"12/10/2020\"},{\"score\":10,\"date\":\"05/07/2018\"}]}",
+      "id": 1
+    },
+    {
+      "email": "abc@gmail.com",
+      "password": "asdf1234",
+      "phone": "8458956152",
+      "category": "{\"Sports\":[{\"score\":8,\"date\":\"12/10/2020\"},{\"score\":10,\"date\":\"05/07/2018\"}],\"Space\":[{\"score\":8,\"date\":\"12/10/2020\"},{\"score\":10,\"date\":\"05/07/2018\"},{\"score\":8,\"date\":\"02/06/1202\"},{\"score\":8,\"date\":\"02/06/1202\"}]}",
+      "id": 2
+    }
+  ]
+}
