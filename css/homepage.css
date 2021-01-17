@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+html, body 
+{
+  height: 100%;
+}
+body 
+{
+  display: flex;
+  flex-direction: column;
+  font-family: Rubik;
+  background-color: #f3f3f3;
+}
+.container 
+{ 
+  flex: 1 0 auto;
+  padding: 20px;
+}
+
+.jumbotron-bk-image {
+  background: linear-gradient(rgba(1,1,1,0.3), rgba(1,1,1,0.3)), url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  background-size: 100% 100%;
+  color: black;
+  border-radius: 0;
+  color: rgb(241, 196, 48);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.card
+{
+  height: 15em;
+  justify-content: center;
+}
+.card-size
+{
+  margin:auto;
+  width: 18rem;
+   background-size: 100% 100%;
+   color: white;
+   font-weight: 600;
+}
+.card-sports
+{
+  background-image:linear-gradient(rgba(1,1,1,0.3), rgba(1,1,1,0.3)),url('../images/sports.jpg');
+}
+.card-entertainment
+{
+  background-image:linear-gradient(rgba(1,1,1,0.3), rgba(1,1,1,0.3)),url('../images/entertainment.jpg');
+}
+.card-science
+{
+  background-image:linear-gradient(rgba(1,1,1,0.3), rgba(1,1,1,0.3)),url('../images/science.jpg');
+}
+.card-gk
+{
+  background-image:linear-gradient(rgba(1,1,1,0.3), rgba(1,1,1,0.3)),url('../images/gk.jpg');
+}
+.card-pf
+{
+  background-image:linear-gradient(rgba(1,1,1,0.3), rgba(1,1,1,0.3)),url('../images/programming.jpg');
+}
+.card-space
+{
+  background-image:linear-gradient(rgba(1,1,1,0.3), rgba(1,1,1,0.3)),url('../images/space.jpg');
+}
+.card:hover
+{
+  border: 3px solid black;
+}
+
+.lead
+{
+  width: auto;
+  margin-top: 30%;
+  margin-bottom: auto;
+}
+
+.modal-content{
+  background: url("../images/bg2.jpg");
+  color: rgb(224, 224, 224);
+  /* background-color: rgba(0, 0, 0, 0.788); */
+  
+}
+.close{
+  color: white;
+}

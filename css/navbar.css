@@ -1,0 +1,19 @@
+.footer , .header, .button {
+    background-color:#07617d;
+    color: #ecf0f1;
+}
+
+.user {
+    color: white;
+    text-transform: capitalize;
+    padding: 7px 12px;
+}
+
+.border-btn {
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.font-16px {
+    font-size: 16px;
+}

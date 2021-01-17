@@ -1,0 +1,75 @@
+#data{
+    width: 500px;
+    margin: 0 auto;
+    border: 2px solid rgba(247, 52, 52, 0.589)  ;
+}
+
+#divfooter{
+    display: inline;
+}
+
+table{
+   box-shadow:  5px 5px #ebd1d1bb;
+}
+
+h1{
+    text-align: center;
+     color: black;
+    animation: animate 0.5s linear infinite; 
+}
+
+@keyframes animate{ 
+    0%{ 
+      color: black; 
+    } 
+    50%{ 
+      color: rgba(0, 255, 255, 0.479); 
+    } 
+    100%{ 
+      color: rgba(255, 0, 0, 0.74); 
+    } 
+}
+
+@media all and (max-width: 400px){
+    #piechart{
+        margin: 0 auto;
+        height: 200px;
+        width: 100px;
+    }
+    #curve_chart1, #curve_chart2, #curve_chart3, #curve_chart4, #curve_chart5, #curve_chart6{
+        margin: 0 auto;
+        width: 50px;
+        height: 100px;
+        
+    }
+}
+
+@media all and (min-width: 400px) and (max-width: 700px)
+{
+    #curve_chart1, #curve_chart2, #curve_chart3, #curve_chart4, #curve_chart5, #curve_chart6{
+        margin: 0 auto;
+        width: 400px ;
+        height: 300px;
+        
+    }
+    #piechart{
+        margin: 0 auto;
+        height: 200px;
+        width: 400px;
+    }
+}
+
+@media all and (min-width: 700px)
+{
+    #curve_chart1, #curve_chart2, #curve_chart3, #curve_chart4, #curve_chart5, #curve_chart6 {
+        margin: 0 auto;
+        width: 700px; 
+        height: 400px;
+        
+    } 
+    #piechart{
+        margin: 0 auto;
+        height: 200px;
+        width: 500px;
+    }
+}

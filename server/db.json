@@ -1,0 +1,664 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": "admin@123"
+    }
+  ],
+  "user": [
+    {
+      "name": "Ram",
+      "email": "ram23@gmail.com",
+      "password": "ram@4567",
+      "phone": "94568595665",
+      "id": 1
+    },
+    {
+      "name": "Atharva",
+      "email": "athu@gmail.com",
+      "password": "asd123",
+      "phone": "7485963215",
+      "category": "{\"Entertainment\":[{\"score\":0,\"date\":\"17/01/2021\"},{\"score\":0,\"date\":\"17/01/2021\"}],\"Space\":[{\"score\":5,\"date\":\"17/01/2021\"}],\"Science\":[{\"score\":0,\"date\":\"17/01/2021\"}]}",
+      "id": 2
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Sports"
+    },
+    {
+      "id": 2,
+      "name": "Science"
+    },
+    {
+      "id": 3,
+      "name": "Programming-Facts"
+    },
+    {
+      "id": 4,
+      "name": "Entertainment"
+    },
+    {
+      "id": 5,
+      "name": "General-Knowledge"
+    },
+    {
+      "id": 6,
+      "name": "Space"
+    }
+  ],
+  "Sports": [
+    {
+      "question": "Name the Indian Chess player who has broken the World Record by finishing the game in first twelve moves?",
+      "option_1": "Vishwanathan Anand",
+      "option_2": "Champa Bose",
+      "option_3": "Sakunthala Devi",
+      "option_4": "Praveen Thipsey",
+      "correct_option": "1",
+      "image_url": "",
+      "id": 1
+    },
+    {
+      "question": "The term 'Butterfly Stroke' is associated with",
+      "option_1": "Wrestling",
+      "option_2": "Boxing",
+      "option_3": "Kabaddi",
+      "option_4": "Swimming",
+      "correct_option": "1",
+      "image_url": "",
+      "id": 2
+    },
+    {
+      "question": "Which of the following statement is not correct about ICC World Cup 2019?",
+      "option_1": "It was the 12th edition of the ICC Cricket World Cup",
+      "option_2": "Rohit Sharma has scored 6 centuries in this tournament",
+      "option_3": "Australia Mitchell Starc was the leading wicket-taker in the tournament",
+      "option_4": "Mohammad Shami and Trent Boult took the hat trick in this tournament",
+      "correct_option": "2",
+      "image_url": "",
+      "id": 3
+    },
+    {
+      "question": "As per BCCI's new annual contract which of the following player is NOT in the grade A+ category?",
+      "option_1": "Virat Kohli",
+      "option_2": "Rohit Sharma",
+      "option_3": "Jasprit Bumrah",
+      "option_4": "Shikhar Dhawan",
+      "correct_option": "4",
+      "image_url": "",
+      "id": 4
+    },
+    {
+      "question": "Champions League played in Europe is organised and managed by which Organisation?",
+      "option_1": "FIFA",
+      "option_2": "UEFA",
+      "option_3": "CONCAF",
+      "option_4": "FA",
+      "correct_option": "2",
+      "image_url": "",
+      "id": 5
+    },
+    {
+      "question": "Which of the following is not correct?",
+      "option_1": "Brazil and Italy has won the football world cup 4 time each",
+      "option_2": "Next football world cup will be held in Russia",
+      "option_3": "Uruguay was the first winner of the football world cup",
+      "option_4": "First football world cup was held in 1930",
+      "correct_option": "1",
+      "image_url": "",
+      "id": 6
+    },
+    {
+      "question": "In world cup of one day cricket, which country lost maximum numbers of finals?",
+      "option_1": "Pakistan",
+      "option_2": "England",
+      "option_3": "South Africa",
+      "option_4": "West Indies",
+      "correct_option": "2",
+      "image_url": "",
+      "id": 7
+    },
+    {
+      "question": "Who is the costliest player in the IPL auction history?",
+      "option_1": "Ben Stokes",
+      "option_2": "Gautam Ghambir",
+      "option_3": "Yusuf Pathan",
+      "option_4": "Yuvraj Singh",
+      "correct_option": "4",
+      "image_url": "",
+      "id": 8
+    },
+    {
+      "question": "In which Olympic Games, Indian hockey team won Gold medal?",
+      "option_1": "9th",
+      "option_2": "10th",
+      "option_3": "11th",
+      "option_4": "12th",
+      "correct_option": "1",
+      "image_url": "",
+      "id": 9
+    },
+    {
+      "question": "In the Lawn Tennis while serving the serve always has to fall in the.............",
+      "option_1": "Opposite box",
+      "option_2": "Diagonal Opposite box",
+      "option_3": "Any box",
+      "option_4": "Anywhere in the opposite court",
+      "correct_option": "2",
+      "image_url": "",
+      "id": 10
+    }
+  ],
+  "Science": [
+    {
+      "question": "Who wrote A Brief History of Time?",
+      "option_1": "Isaac Newton",
+      "option_2": "Edwin Hubble",
+      "option_3": "Stephen Hawking",
+      "option_4": "Albert Einstein",
+      "correct_option": "3",
+      "id": 1,
+      "image_url": ""
+    },
+    {
+      "question": "What is the lightest metal?",
+      "option_1": "Mercury",
+      "option_2": "Lithium",
+      "option_3": "Silver",
+      "option_4": "Nickel",
+      "correct_option": "2",
+      "id": 2,
+      "image_url": ""
+    },
+    {
+      "question": " Which frozen gas forms dry ice?",
+      "option_1": "Neon",
+      "option_2": "Hydrogen",
+      "option_3": "Nitrogen",
+      "option_4": "Carbon Dioxide",
+      "correct_option": "4",
+      "id": 3,
+      "image_url": ""
+    },
+    {
+      "question": "Who discovered radio waves?",
+      "option_1": "Heinrich Hertz",
+      "option_2": "Charles Darwin",
+      "option_3": "Albert Einstein",
+      "option_4": "Rachel Carson",
+      "correct_option": "1",
+      "id": 4,
+      "image_url": ""
+    },
+    {
+      "question": "For which animal is the Latin word lupine used?",
+      "option_1": "Rhino",
+      "option_2": "Wolf",
+      "option_3": "Tiger",
+      "option_4": "Elephant",
+      "correct_option": "2",
+      "id": 5,
+      "image_url": ""
+    },
+    {
+      "question": "Which planet has the most moons?",
+      "option_1": "Neptune",
+      "option_2": "Mars",
+      "option_3": "Saturn",
+      "option_4": "Jupiter",
+      "correct_option": "4",
+      "id": 6,
+      "image_url": ""
+    },
+    {
+      "question": "If you get scurvy, what vitamin are you deficient in?",
+      "option_1": "Vitamin A",
+      "option_2": "Vitamin B",
+      "option_3": "Vitamin C",
+      "option_4": "Vitamin D",
+      "correct_option": "3",
+      "image_url": "",
+      "id": 7
+    },
+    {
+      "question": "Oxidation is a process which involves",
+      "option_1": "removal of hydrogen",
+      "option_2": "removal of oxygen",
+      "option_3": "addition of hydrogen",
+      "option_4": "addition of oxygen",
+      "correct_option": "4",
+      "image_url": "",
+      "id": 8
+    },
+    {
+      "question": "Roots of the plants absorb water from the soil through the process of",
+      "option_1": "Diffusion",
+      "option_2": "Transpiration",
+      "option_3": "Osmosis",
+      "option_4": "None of these",
+      "correct_option": "3",
+      "image_url": "",
+      "id": 9
+    },
+    {
+      "question": "Glycolysis process occurs in which part of the cell?",
+      "option_1": "Nucleus",
+      "option_2": "Cytoplasm",
+      "option_3": "Mitochondria",
+      "option_4": "Chloroplast",
+      "correct_option": "2",
+      "image_url": "",
+      "id": 10
+    }
+  ],
+  "Programming-Facts": [
+    {
+      "question": "The first computer virus was created in",
+      "option_1": "1965",
+      "option_2": "1991",
+      "option_3": "1983",
+      "option_4": "1947",
+      "correct_option": "3",
+      "image_url": "",
+      "id": 1
+    },
+    {
+      "question": "The part of machine level instruction, which tells the central processor what has to be done, is",
+      "option_1": "Operation code",
+      "option_2": "Address",
+      "option_3": "Locator",
+      "option_4": "Flip-Flop",
+      "correct_option": "1",
+      "image_url": "",
+      "id": 2
+    },
+    {
+      "question": "Who among the following considered as the 'father of artificial intelligence",
+      "option_1": "Charles Babbage",
+      "option_2": "Lee De Forest",
+      "option_3": "John McCarthy",
+      "option_4": "JP Eckert",
+      "correct_option": "3",
+      "image_url": "",
+      "id": 3
+    },
+    {
+      "question": "Which of the following is also called translator?",
+      "option_1": "Data representation",
+      "option_2": "MS-DOS",
+      "option_3": "Operating System",
+      "option_4": "Language Processor",
+      "correct_option": "4",
+      "image_url": "",
+      "id": 4
+    },
+    {
+      "question": " In which year did IBM developed ORTRAN High Level programming languages used to write scientific applications?",
+      "option_1": "1989",
+      "option_2": "1956",
+      "option_3": "1978",
+      "option_4": "1924",
+      "correct_option": "2",
+      "image_url": "",
+      "id": 5
+    },
+    {
+      "question": "What is the range of numbers you can store in a variable of type byte?",
+      "option_1": "0 to 255",
+      "option_2": "-128 to 127",
+      "option_3": "0 to 9",
+      "option_4": "0 to 65535",
+      "correct_option": "2",
+      "image_url": "",
+      "id": 6
+    },
+    {
+      "question": "Which is the first search engine in internet?",
+      "option_1": "Google",
+      "option_2": "Archie",
+      "option_3": "Altavista",
+      "option_4": "WAIS",
+      "correct_option": "2",
+      "image_url": "",
+      "id": 7
+    },
+    {
+      "question": "In which year @ sign first choosen in email address?",
+      "option_1": "1972",
+      "option_2": "1980",
+      "option_3": "1977",
+      "option_4": "1976",
+      "correct_option": "1",
+      "image_url": "",
+      "id": 8
+    },
+    {
+      "question": "How many printing characters are there in ASCII?",
+      "option_1": "62",
+      "option_2": "70",
+      "option_3": "85",
+      "option_4": "94",
+      "correct_option": "4",
+      "image_url": "",
+      "id": 9
+    },
+    {
+      "question": "The folders in operating system based on which structure?",
+      "option_1": "Doubly link",
+      "option_2": "Queue",
+      "option_3": "Inverted Queue",
+      "option_4": "Graph",
+      "correct_option": "3",
+      "image_url": "",
+      "id": 10
+    }
+  ],
+  "Entertainment": [
+    {
+      "question": "Who is the writer of Naruto?",
+      "option_1": "Akira Toriyama",
+      "option_2": "Seishi Kishimoto",
+      "option_3": "Masashi Kishimoto",
+      "option_4": "Yoshihiro Togashi",
+      "correct_option": "3",
+      "image_url": "naruto.jpg",
+      "id": 1
+    },
+    {
+      "question": "In which year ipl started?",
+      "option_1": "2009",
+      "option_2": "2008",
+      "option_3": "2010",
+      "option_4": "2011",
+      "correct_option": "2",
+      "image_url": "ipl.jpg",
+      "id": 2
+    },
+    {
+      "question": "Who is the writer of marvel comics?",
+      "option_1": "William Goldman",
+      "option_2": "Robert Towne",
+      "option_3": "Billy Wilder",
+      "option_4": "Stan Lee",
+      "correct_option": "4",
+      "image_url": "marval.jpg",
+      "id": 3
+    },
+    {
+      "question": "Who wrote the story of Inception?",
+      "option_1": "Christopher Nolan",
+      "option_2": "Leonardo DiCaprio",
+      "option_3": "David Fincher",
+      "option_4": "Emma Thomas",
+      "correct_option": "1",
+      "image_url": "inception.jpg",
+      "id": 4
+    },
+    {
+      "question": "In which year walt disney founded?",
+      "option_1": "1924",
+      "option_2": "1923",
+      "option_3": "1927",
+      "option_4": "1921",
+      "correct_option": "2",
+      "image_url": "disney.jpg",
+      "id": 5
+    },
+    {
+      "question": "Who wrote the song wavin flag?",
+      "option_1": "Ceasers",
+      "option_2": "Pibull",
+      "option_3": "Alan Walker",
+      "option_4": "K'naan",
+      "correct_option": "4",
+      "id": 6,
+      "image_url": ""
+    },
+    {
+      "question": "In which year was the first harry potter book published?",
+      "option_1": "1999",
+      "option_2": "1998",
+      "option_3": "1997",
+      "option_4": "1996",
+      "correct_option": "3",
+      "image_url": "har.jpg",
+      "id": 7
+    },
+    {
+      "question": "What is the total budget of gravity movie?",
+      "option_1": "7 crores USD",
+      "option_2": "8 crores USD",
+      "option_3": "9 crores USD",
+      "option_4": "10 crores USD",
+      "correct_option": "4",
+      "image_url": "gravity.jpg",
+      "id": 8
+    },
+    {
+      "question": "Who is the singer of despacito song?",
+      "option_1": "David Bisbal",
+      "option_2": "Enrique Iglesias",
+      "option_3": "Luis Fonsi",
+      "option_4": "Daddy Yankee",
+      "correct_option": "3",
+      "id": 9,
+      "image_url": ""
+    },
+    {
+      "question": "In which year dragon ball anime released?",
+      "option_1": "1985",
+      "option_2": "1986",
+      "option_3": "1991",
+      "option_4": "1987",
+      "correct_option": "2",
+      "image_url": "dragon.jpg",
+      "id": 10
+    }
+  ],
+  "General-Knowledge": [
+    {
+      "id": 1,
+      "question": "The World Largest desert is ?",
+      "option_1": " Thar",
+      "option_2": "Kalahari",
+      "option_3": "Sahara",
+      "option_4": "Sonoran",
+      "correct_option": 3,
+      "image_url": ""
+    },
+    {
+      "id": 2,
+      "question": "The gas used for making vegetables is ?",
+      "option_1": "Oxygen",
+      "option_2": "Carbon dioxide",
+      "option_3": "Hydrogen",
+      "option_4": "Nitrogen",
+      "correct_option": 3,
+      "image_url": ""
+    },
+    {
+      "id": 3,
+      "question": "Country that was called as Land of Rising Sun ?",
+      "option_1": "Russia",
+      "option_2": "Japan",
+      "option_3": "Korea",
+      "option_4": " Holland",
+      "correct_option": 2,
+      "image_url": ""
+    },
+    {
+      "id": 4,
+      "question": "The state which has desert in India is ?",
+      "option_1": "Rajasthan",
+      "option_2": "Punjab",
+      "option_3": "Uttar Pradesh",
+      "option_4": " Madhya Pradesh",
+      "correct_option": 1,
+      "image_url": ""
+    },
+    {
+      "id": 5,
+      "question": "The headquarters of the coffee board of India is ?",
+      "option_1": "Mysore",
+      "option_2": " Kolkata",
+      "option_3": "Bangalore",
+      "option_4": " Cochin",
+      "correct_option": 3,
+      "image_url": ""
+    },
+    {
+      "id": 6,
+      "question": "The largest river in India is ?",
+      "option_1": "Yamuna",
+      "option_2": "Kaveri",
+      "option_3": "Ganga",
+      "option_4": " Bramaputra",
+      "correct_option": 3,
+      "image_url": ""
+    },
+    {
+      "id": 7,
+      "question": "“Oscar awards” given for excellent work in the field of",
+      "option_1": "Literature",
+      "option_2": "Sports",
+      "option_3": "Films",
+      "option_4": " Social activities",
+      "correct_option": 3,
+      "image_url": ""
+    },
+    {
+      "id": 8,
+      "question": "Which state has the largest population?",
+      "option_1": "Uttar Pradesh",
+      "option_2": "Maharastra",
+      "option_3": "Bihar",
+      "option_4": " Andra Pradesh",
+      "correct_option": 1,
+      "image_url": ""
+    },
+    {
+      "id": 9,
+      "question": "First University in India was founded at",
+      "option_1": "Bombay",
+      "option_2": " Chennai",
+      "option_3": "Calcutta",
+      "option_4": " Delhi",
+      "correct_option": 3,
+      "image_url": ""
+    },
+    {
+      "id": 10,
+      "question": "The term Lok Sabha is normally",
+      "option_1": "2 years",
+      "option_2": "4 years",
+      "option_3": "5 years",
+      "option_4": " 7 years",
+      "correct_option": 3,
+      "image_url": ""
+    }
+  ],
+  "Space": [
+    {
+      "question": "The day on which the Sun’s direct rays cross the celestial equator is called",
+      "option_1": "The equinox",
+      "option_2": "The aphelion",
+      "option_3": "The ecliptic",
+      "option_4": "The solstice",
+      "correct_option": "1",
+      "image_url": "",
+      "id": 1
+    },
+    {
+      "question": "Who invented the telescope?",
+      "option_1": "Hypatia",
+      "option_2": "Galileo",
+      "option_3": "Hans Lippershey",
+      "option_4": "Johannes Kepler",
+      "correct_option": "3",
+      "image_url": "telescope.jpg",
+      "id": 2
+    },
+    {
+      "question": "What term describes the alignment of three celestial bodies?",
+      "option_1": "sizzle",
+      "option_2": "symbology",
+      "option_3": "suzerainty",
+      "option_4": "syzygy",
+      "correct_option": "4",
+      "image_url": "",
+      "id": 3
+    },
+    {
+      "question": "What is the smallest planet in the solar system by mass?",
+      "option_1": "Mars",
+      "option_2": "Jupiter",
+      "option_3": "Mercury",
+      "option_4": "Earth",
+      "correct_option": "3",
+      "image_url": "planet.jpg",
+      "id": 4
+    },
+    {
+      "question": "What is the visible part of the Sun called?",
+      "option_1": "Atmosphere",
+      "option_2": "Photosphere",
+      "option_3": "Lithosphere",
+      "option_4": "Stratosphere",
+      "correct_option": "2",
+      "image_url": "sun.jpg",
+      "id": 5
+    },
+    {
+      "question": "Which of the following was the first artificial satellite?",
+      "option_1": "Lander Beagle",
+      "option_2": "Sputnik",
+      "option_3": "Sojourner",
+      "option_4": "Apollo 11",
+      "correct_option": "2",
+      "image_url": "satellite.jpg",
+      "id": 6
+    },
+    {
+      "question": "Which of the following space missions launched in a cooperative effort among the Soviet Union and Austria, Bulgaria, France, Hungary, the German Democratic Republic, Poland, Czechoslovakia and the Federal Republic of Germany?",
+      "option_1": "Venus Express",
+      "option_2": "Venera Mission",
+      "option_3": "Magellan Spacecraft",
+      "option_4": "Vega program",
+      "correct_option": "4",
+      "image_url": "",
+      "id": 7
+    },
+    {
+      "question": "When ISRO was established?",
+      "option_1": "15 October 1969",
+      "option_2": "15 August 1959",
+      "option_3": "15 August 1969",
+      "option_4": "15 October 1959",
+      "correct_option": "3",
+      "image_url": "isro.jpg",
+      "id": 8
+    },
+    {
+      "question": "Who was the India’s first man/women in the space?",
+      "option_1": "Kalpana Chawla",
+      "option_2": "Rajesh Sharma",
+      "option_3": "Rakesh Sharma",
+      "option_4": "Sunita Williams",
+      "correct_option": "3",
+      "image_url": "astronaut.jpg",
+      "id": 9
+    },
+    {
+      "question": "What is a group of old stars closely packed in a symmetrical form called?",
+      "option_1": "Galactic cluster",
+      "option_2": "Globular cluster",
+      "option_3": "Star cluster",
+      "option_4": "Open cluster",
+      "correct_option": "2",
+      "image_url": "",
+      "id": 10
+    }
+  ]
+}

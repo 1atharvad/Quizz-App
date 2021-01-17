@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Favicon image -->
+        <link rel="icon" type="image/png" href="./images/favicon.png"/>
+
+        <!-- Bootstrap CSS & JS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        
+        <!-- Google Charts API-->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+        <!-- jQuery and Local JS-->
+        <script defer type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script defer src="./js/navbar.js"></script>
+        <script defer src="./js/dashboard.js"></script>
+
+        <!-- Local CSS -->
+        <link rel="stylesheet" href="./css/dashboard.css">
+        <link rel="stylesheet" href="./css/navbar.css">
+
+        <title>QuizBee</title>
+        
+    </head>
+    <body>
+        <!--navbar Start-->
+        <nav class="navbar navbar-dark header " id="navBar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./">QuizBee</a>
+                <button class="navbar-toggler border-0 shadow-none" style="outline:0; border: 0;" type="button" onclick="toggleNav()">
+                    <span class="user"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item" id="signin">
+                            <button type="button" class="btn button btn-md" data-bs-toggle="modal" data-bs-target="#login_model">Log In</button>
+                        </li>
+                        <li class="nav-item" id="signup">
+                            <button type="button" class="btn button btn-md" data-bs-toggle="modal" data-bs-target="#signup_model">Sign Up</button>
+                        </li>
+                        <li class="nav-item">
+                            <button id="dashboard" class="btn button me-md-2" type="button" onclick="dashboard()">Dashboard</button>
+                        </li>
+                        <li class="nav-item" id="logout">
+                            <button class="btn button" type="button" onclick="logout()">Logout</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--navbar End-->
+        <h1>QUIZ History</h1>
+        <div id="person"></div>
+        <table id="data" class="table table-striped table-hover table-bordered" >
+            <thead>
+                <th>ID</th>
+                <th>Category</th>
+                <th>Score</th>
+                <th>Date</th>
+            </thead>
+            <tbody id="table"></tbody>
+        </table><br>
+
+        <div id="piechart"></div>
+        <div class="curvechart">
+            <div id="curve_chart1"></div>
+            <div id="curve_chart2"></div>
+            <div id="curve_chart3"></div>
+            <div id="curve_chart4"></div>
+            <div id="curve_chart5"></div>
+            <div id="curve_chart6"></div>
+        </div>
+
+        <footer class="footer">
+            <div class="navbar navbar-expand-lg text-center d-flex justify-content-center align-center">
+                <p>@QuizBee, 2021</p>
+            </div>
+        </footer>
+    </body>
+</html>

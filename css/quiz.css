@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+body{
+  background: linear-gradient(#9dc1f7, #b86ff3) ;
+ font-family: rubik;
+min-height: 100vh;
+}
+/*  header of Quiz */
+.h1 {
+ font-family: serif ;
+  text-align: center ;
+  font-size: 5vw ;
+ position: relative ;
+
+}
+
+h4 #timer{
+  color: #09111a;
+  padding: 1%;
+  background-color: rgb(182, 179, 179);
+  position: absolute;
+  left: 70%;
+  top: 7%; 
+  font-size: 1.3vw;
+}
+hr {
+  height: 1px ;
+
+  box-shadow: inset 1px 10px 10px -12px rgba(0, 0, 0, 0.5) ;
+}
+
+ /* Quiz Classes */
+.quizContainer {
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #abddf1;
+  border-radius: 15px;
+  width: 60%;
+  margin: auto ;
+   margin-top: 2%;
+   position: relative;
+  display: none;
+  word-wrap: break-word;
+}
+
+.question {
+  font-size: 1.5vw;
+ padding: 1px;
+  width: 100%;
+  white-space: pre-line;
+  color: #000;
+}
+.box_image{
+  width: 50%;
+  margin: 20px auto;
+}
+.image{
+ width: 100%;
+}
+.choiceList {
+ color: #0c0c0c;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+   font-size: 1.5vw;
+}
+
+li:hover{
+  cursor: pointer ;
+  box-shadow: 0.1rem 0.3rem 0.2rem 0 rgba(86, 185, 235, 0.5) ;
+}
+
+input[type=radio] {
+  border: 0px;
+  width: 20px;
+  height: 2em;
+}
+
+
+.preButton,.nextButton,.question_close{
+  border-radius: 6px;
+   padding:2%;
+  width: 30%;
+  text-align: center;
+  background-color: rgb(39, 154, 231);
+   color: rgb(255, 255, 255);
+  border: 1px solid rgb(113, 105, 226);
+  font-size: 20px;
+  margin-left: 2%;
+ margin-bottom: 1%;
+
+}
+
+.preButton:disabled,.nextButton:disabled{
+  border-color: rgb(185, 179, 179);
+  background-color: rgb(233, 227, 227);
+  color: #000;
+
+}
+
+.btn-raised {
+  transition: box-shadow .4s cubic-bezier(.25, .8, .25, 1), transform .4s cubic-bezier(.25, .8, .25, 1);
+  box-shadow: 0 2px 5px 0 rgba(150, 52, 216, 0.26);
+}
+
+.btn-raised:not([disabled]):active,
+.btn-raised:not([disabled]):focus,
+.btn-raised:not([disabled]):hover {
+  box-shadow: 0 4px 8px 0 rgba(35, 65, 201, 0.4);
+  transform: translate3d(0, -1px, 0);
+}
+
+.submit{
+  border-radius: 6px;
+  padding:2%;
+  width: 30%;
+  text-align: center;
+  background-color: rgb(124, 71, 122);
+  color: rgb(255, 255, 255);
+   border: 1px solid rgb(113, 105, 226);
+  font-size: 20px;
+  margin-left: 2%;
+}
+
+.result {
+  width: 80%;
+ color: green;
+  text-align: center;
+font-size: 20px;
+  font-family: serif;
+font-weight: bold;
+}
+
+/* submit modal */
+.modal-confirm {		
+  margin: 50px auto;
+}
+
+.modal-confirm .modal-content {
+padding: 20px;
+border-radius: 5px;
+border: none;
+text-align: center;
+}
+
+.modal-confirm .modal-header {
+border-bottom: none;   
+position: relative;
+}
+
+.modal-confirm h4 {
+text-align: center;
+font-size: 26px;
+margin: 30px 0 -10px;
+}
+
+.modal-confirm .close {
+position: absolute;
+top: -5px;
+right: -2px;
+}
+
+.modal-confirm .modal-footer {
+border: none;
+text-align: center;		
+border-radius: 5px;
+font-size: 13px;
+padding: 10px 15px 25px;
+}
+
+.modal-confirm .icon-box {
+width: 80px;
+height: 80px;
+margin: 0 auto;
+border-radius: 50%;
+z-index: 9;
+text-align: center;
+border: 3px solid #f15e5e;
+}
+
+.modal-confirm .icon-box span {
+color: #f15e5e;
+font-size: 46px;
+display: inline-block;
+margin-top: 2px;
+}
+
+.modal-confirm .btn, .modal-confirm .btn:active {
+color: #fff;
+text-decoration: none;
+transition: all 0.4s;
+line-height: normal;
+min-width: 120px;
+border: none;
+min-height: 40px;
+border-radius: 3px;
+margin: 0 5px;
+}
+
+/* footer */
+.footer ,.header,.button
+{
+  background-color:#07617d;
+  color: #ecf0f1;
+  
+}
+.footer{
+  clear: both;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top:5%;
+  bottom: 0%;
+}
+
+#user {
+  color:white;
+  text-transform: uppercase;
+  border: 2px solid black;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+
+/* small*/
+@media only screen and (max-width:700px) {
+  .quizContainer{
+    width: 100%;
+  }
+
+  .question {
+     font-size: 3.4vw;
+ }
+
+ li {
+font-size: 3.6vw;
+}
+
+h4 #timer, h4 #iTimeShow{
+  font-size: 2.5vw;
+}
+
+}
+
+
+/* medium */
+@media only screen and (min-width:701px)and (max-width:969px) {
+  .quizContainer{
+    width: 80%;
+  }
+.question {
+    font-size: 3vw;
+ }
+li {
+   font-size: 3vw;
+}
+h4 #timer,h4{
+  font-size: 2vw;
+}
+} 
+
+
+/* large */
+@media only screen and (min-width:970px)and (max-width:1200px) {
+  .quizContainer{
+    width: 80%;
+  }
+  .question {
+     font-size: 2.7vw;
+ }
+ li {
+   font-size: 2.5vw;
+}
+#timer{
+  font-size: 2.8vw;
+}
+} 
