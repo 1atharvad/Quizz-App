@@ -12,6 +12,7 @@
       "email": "ram23@gmail.com",
       "password": "ram@4567",
       "phone": "94568595665",
+      "category": "{}",
       "id": 1
     },
     {
@@ -21,6 +22,22 @@
       "phone": "7485963215",
       "category": "{\"Entertainment\":[{\"score\":0,\"date\":\"17/01/2021\"},{\"score\":0,\"date\":\"17/01/2021\"}],\"Space\":[{\"score\":5,\"date\":\"17/01/2021\"}],\"Science\":[{\"score\":0,\"date\":\"17/01/2021\"}]}",
       "id": 2
+    },
+    {
+      "name": "pratika",
+      "email": "pratika11@gmail.com",
+      "password": "abc",
+      "phone": "9763006251",
+      "category": "{\"Sports\":[{\"score\":0,\"date\":\"18/01/2021\"}]}",
+      "id": 3
+    },
+    {
+      "name": "Anahita",
+      "email": "ana@gmail.com",
+      "password": "ana123",
+      "phone": "9881150540",
+      "category": "{\"Sports\":[{\"score\":3,\"date\":\"18/01/2021\"}]}",
+      "id": 4
     }
   ],
   "category": [
@@ -51,16 +68,6 @@
   ],
   "Sports": [
     {
-      "question": "Name the Indian Chess player who has broken the World Record by finishing the game in first twelve moves?",
-      "option_1": "Vishwanathan Anand",
-      "option_2": "Champa Bose",
-      "option_3": "Sakunthala Devi",
-      "option_4": "Praveen Thipsey",
-      "correct_option": "1",
-      "image_url": "",
-      "id": 1
-    },
-    {
       "question": "The term 'Butterfly Stroke' is associated with",
       "option_1": "Wrestling",
       "option_2": "Boxing",
@@ -68,7 +75,7 @@
       "option_4": "Swimming",
       "correct_option": "1",
       "image_url": "",
-      "id": 2
+      "id": 1
     },
     {
       "question": "Which of the following statement is not correct about ICC World Cup 2019?",
@@ -78,7 +85,7 @@
       "option_4": "Mohammad Shami and Trent Boult took the hat trick in this tournament",
       "correct_option": "2",
       "image_url": "",
-      "id": 3
+      "id": 2
     },
     {
       "question": "As per BCCI's new annual contract which of the following player is NOT in the grade A+ category?",
@@ -88,7 +95,7 @@
       "option_4": "Shikhar Dhawan",
       "correct_option": "4",
       "image_url": "",
-      "id": 4
+      "id": 3
     },
     {
       "question": "Champions League played in Europe is organised and managed by which Organisation?",
@@ -97,6 +104,16 @@
       "option_3": "CONCAF",
       "option_4": "FA",
       "correct_option": "2",
+      "image_url": "",
+      "id": 4
+    },
+    {
+      "question": "Which of the following is not correct?",
+      "option_1": "Brazil and Italy has won the football world cup 4 time each",
+      "option_2": "Next football world cup will be held in Russia",
+      "option_3": "Uruguay was the first winner of the football world cup",
+      "option_4": "First football world cup was held in 1930",
+      "correct_option": "1",
       "image_url": "",
       "id": 5
     },
@@ -149,6 +166,16 @@
       "correct_option": "2",
       "image_url": "",
       "id": 10
+    },
+    {
+      "question": "The term 'Butterfly Stroke' is associated with",
+      "option_1": "Wrestling",
+      "option_2": "Boxing",
+      "option_3": "Kabaddi",
+      "option_4": "Swimming",
+      "correct_option": "1",
+      "image_url": "",
+      "id": 11
     }
   ],
   "Science": [

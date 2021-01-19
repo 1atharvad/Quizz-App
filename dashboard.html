@@ -53,27 +53,92 @@
             </div>
         </nav>
         <!--navbar End-->
-        <h1>QUIZ History</h1>
-        <div id="person"></div>
-        <table id="data" class="table table-striped table-hover table-bordered" >
-            <thead>
-                <th>ID</th>
-                <th>Category</th>
-                <th>Score</th>
-                <th>Date</th>
-            </thead>
-            <tbody id="table"></tbody>
-        </table><br>
-
-        <div id="piechart"></div>
-        <div class="curvechart">
-            <div id="curve_chart1"></div>
-            <div id="curve_chart2"></div>
-            <div id="curve_chart3"></div>
-            <div id="curve_chart4"></div>
-            <div id="curve_chart5"></div>
-            <div id="curve_chart6"></div>
+        
+        <h3 class="text-center my-5">Welcome to your Dashboard, <span class="username"></span>!!!</h3>
+        <div class="d-flex justify-content-around my-5 flex-column flex-md-row">
+          <div class="card" style=" height: 600px;">
+            <div class="card-body text-center">
+              <div class="grid-item" id="bargraph" ></div>
+            </div>
         </div>
+
+        <div class="card" style=" height: 600px;" >
+          <div class="card-body text-center">
+            <div class="grid-item" id="piechart"></div>
+          </div>
+      </div>
+    </div>
+    <!--Category History-->
+        <div class="container my-5">
+          <div class="row text-center">
+              <div class="col-md-6 col-lg-4 my-3">
+                  <div onclick="categoryData('Sports')" class="card card-size card-sports cursor-pointer" data-bs-toggle="modal" data-bs-target="#scoremodal">
+                      <div class="card-body text-center">
+                          <h3 class="card-text lead">Sports</h3>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-4 my-3">
+                  <div onclick="categoryData('Entertainment')" class="card card-size card-entertainment cursor-pointer" data-bs-toggle="modal" data-bs-target="#scoremodal">
+                      <div class="card-body text-center">
+                          <h3 class="card-text lead">Entertainment</h3>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-4 my-3">
+                  <div onclick="categoryData('Science')" class="card card-size card-science cursor-pointer" data-bs-toggle="modal" data-bs-target="#scoremodal">
+                      <div class="card-body text-center">
+                          <h3 class="card-text lead">Science</h3>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-4 my-3">
+                  <div onclick="categoryData('General-Knowledge')" class="card card-size card-gk cursor-pointer" data-bs-toggle="modal" data-bs-target="#scoremodal">
+                      <div class="card-body text-center">
+                          <h3 class="card-text lead">General Knowledge</h3>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-4 my-3">
+                  <div onclick="categoryData('Programming-Facts')" class="card card-size card-pf cursor-pointer" data-bs-toggle="modal" data-bs-target="#scoremodal">
+                      <div class="card-body text-center">
+                          <h3 class="card-text lead">Programming Facts</h3>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-4 my-3">
+                  <div onclick="categoryData('Space')" class="card card-size card-space cursor-pointer" data-bs-toggle="modal" data-bs-target="#scoremodal">
+                      <div class="card-body text-center">
+                          <h3 class="card-text lead">Space</h3>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+        
+<!--Score card modal-->
+      <div class="modal fade bd-example-modal-md" id="scoremodal" tabindex="-1">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="login_model">Score Card</h3>
+                    <button type="button" class="close" data-bs-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                  <span class="emptyCase">Empty Data</span>
+                  <table id="dataTable" class="table table-striped table-hover table-bordered" >
+                    <thead id="thead"></thead>
+                    <tbody id="table"></tbody>
+                </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button"  class="btn btn-info" data-bs-dismiss="modal">Close</button> 
+                </div>
+            </div>
+        </div>
+    </div>
 
         <footer class="footer">
             <div class="navbar navbar-expand-lg text-center d-flex justify-content-center align-center">

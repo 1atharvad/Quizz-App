@@ -57,9 +57,14 @@
           </div>
       </div>
   </nav>
+  <div class="row main">
+
+    <div class="questionNav col-sm-3 col-lg-3 col-md-3"><span id="questionNav_name">Question Navigation</span><br><div class="questionNo"></div></div>
+
 
     <!-- Question Container -->
-    <div class="quizContainer container-fluid well well-lg">
+    <div class="quizContainer container-fluid well well-lg  col-sm-9 col-lg-3 col-md-3">
+      
       <div id="quiz1" class="text-center">
         <h4><br /><span id="timer"></span></h4>
         <div class="h1">Quiz</div>
@@ -74,12 +79,13 @@
       <div class="result"></div>
 
       <hr />
-
-      <button class="preButton btn-raised shadow">Previous</button>
-      <button class="nextButton btn-raised shadow">Next</button>
-      <button  class="submit btn-raised shadow" data-bs-toggle="modal" data-bs-target="#submitModal">Submit</button>
+      <div class="row">
+      <button class="preButton btn-raised shadow col-sm-4 col-lg-4 col-md-4">Previous</button>
+      <button class="nextButton btn-raised shadow col-sm-4 col-lg-4 col-md-4">Next</button>
+      <button  class="submit btn-raised shadow col-sm-4 col-lg-4 col-md-4" data-bs-toggle="modal" data-bs-target="#submitModal">Submit</button>
+     </div>
     </div>
-
+  </div>
 
     <!-- Submit modal -->
     <div id="submitModal" class="modal fade" tabindex="-1">
@@ -114,9 +120,7 @@
         </div>
       </div>
     </div>
-    <div class="">
-     
-    </div>
+    
 
   </body>
 <!-- footer -->

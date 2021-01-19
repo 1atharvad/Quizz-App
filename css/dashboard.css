@@ -1,18 +1,82 @@
-#data{
-    width: 500px;
-    margin: 0 auto;
-    border: 2px solid rgba(247, 52, 52, 0.589)  ;
+body{
+    background-color: #f8f8f8;
 }
 
-#divfooter{
-    display: inline;
+#bargraph{
+    height: 500px;
+   width: fit-content;
 }
+
+#piechart{
+    height: 500px;
+    width: fit-content;
+}
+
+.grid-container>.grid-item{
+    position: relative;
+    left: 100px;
+   
+}
+
+.card
+{
+  height: 15em;
+  justify-content: center;
+}
+.card-size
+{
+  margin:auto;
+  width: 18rem;
+   background-size: 100% 100%;
+   color: white;
+   font-weight: 600;
+}
+.card-sports
+{
+  background-image:linear-gradient(rgba(1,1,1,0.3), rgba(1,1,1,0.3)),url('../images/sports.jpg');
+}
+.card-entertainment
+{
+  background-image:linear-gradient(rgba(1,1,1,0.3), rgba(1,1,1,0.3)),url('../images/entertainment.jpg');
+}
+.card-science
+{
+  background-image:linear-gradient(rgba(1,1,1,0.3), rgba(1,1,1,0.3)),url('../images/science.jpg');
+}
+.card-gk
+{
+  background-image:linear-gradient(rgba(1,1,1,0.3), rgba(1,1,1,0.3)),url('../images/gk.jpg');
+}
+.card-pf
+{
+  background-image:linear-gradient(rgba(1,1,1,0.3), rgba(1,1,1,0.3)),url('../images/programming.jpg');
+}
+.card-space
+{
+  background-image:linear-gradient(rgba(1,1,1,0.3), rgba(1,1,1,0.3)),url('../images/space.jpg');
+}
+.card:hover
+{
+  border: 3px solid black;
+}
+
+.lead
+{
+  width: auto;
+  margin-top: 30%;
+  margin-bottom: auto;
+}
+
+
+
+
 
 table{
    box-shadow:  5px 5px #ebd1d1bb;
 }
 
-h1{
+
+.username{
     text-align: center;
      color: black;
     animation: animate 0.5s linear infinite; 
@@ -28,48 +92,4 @@ h1{
     100%{ 
       color: rgba(255, 0, 0, 0.74); 
     } 
-}
-
-@media all and (max-width: 400px){
-    #piechart{
-        margin: 0 auto;
-        height: 200px;
-        width: 100px;
-    }
-    #curve_chart1, #curve_chart2, #curve_chart3, #curve_chart4, #curve_chart5, #curve_chart6{
-        margin: 0 auto;
-        width: 50px;
-        height: 100px;
-        
-    }
-}
-
-@media all and (min-width: 400px) and (max-width: 700px)
-{
-    #curve_chart1, #curve_chart2, #curve_chart3, #curve_chart4, #curve_chart5, #curve_chart6{
-        margin: 0 auto;
-        width: 400px ;
-        height: 300px;
-        
-    }
-    #piechart{
-        margin: 0 auto;
-        height: 200px;
-        width: 400px;
-    }
-}
-
-@media all and (min-width: 700px)
-{
-    #curve_chart1, #curve_chart2, #curve_chart3, #curve_chart4, #curve_chart5, #curve_chart6 {
-        margin: 0 auto;
-        width: 700px; 
-        height: 400px;
-        
-    } 
-    #piechart{
-        margin: 0 auto;
-        height: 200px;
-        width: 500px;
-    }
 }
