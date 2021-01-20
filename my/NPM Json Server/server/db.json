@@ -1,0 +1,162 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": "admin@123"
+    }
+  ],
+  "user": [
+    {
+      "name": "Atharva",
+      "email": "athu12@gmail.com",
+      "password": "asd#4567",
+      "phone": "8584745123",
+      "category": "{\"Sports\":[{\"score\":8,\"date\":\"12/10/2020\"},{\"score\":10,\"date\":\"05/07/2018\"}],\"Space\":[{\"score\":8,\"date\":\"12/10/2020\"},{\"score\":10,\"date\":\"05/07/2018\"},{\"score\":5,\"date\":\"05/07/2018\"},{\"score\":10,\"date\":\"20/01/2021\"}]}",
+      "id": 1
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Sports"
+    },
+    {
+      "id": 2,
+      "name": "Science"
+    },
+    {
+      "id": 3,
+      "name": "Programming-Facts"
+    },
+    {
+      "id": 4,
+      "name": "Entertainment"
+    },
+    {
+      "id": 5,
+      "name": "General-Knowledge"
+    },
+    {
+      "id": 6,
+      "name": "Space"
+    }
+  ],
+  "Sports": [],
+  "Science": [],
+  "Programming-Facts": [],
+  "Entertainment": [],
+  "General-Knowledge": [],
+  "Space": [
+    {
+      "question": "The day on which the Sun’s direct rays cross the celestial equator is called",
+      "option_1": "The equinox",
+      "option_2": "The aphelion",
+      "option_3": "The ecliptic",
+      "option_4": "The solstice",
+      "correct_option": "1",
+      "image_url": "",
+      "id": 1
+    },
+    {
+      "question": "Who invented the telescope?",
+      "option_1": "Hypatia",
+      "option_2": "Galileo",
+      "option_3": "Hans Lippershey",
+      "option_4": "Johannes Kepler",
+      "correct_option": "3",
+      "image_url": "telescope.jpg",
+      "id": 2
+    },
+    {
+      "question": "What term describes the alignment of three celestial bodies?",
+      "option_1": "sizzle",
+      "option_2": "symbology",
+      "option_3": "suzerainty",
+      "option_4": "syzygy",
+      "correct_option": "4",
+      "image_url": "",
+      "id": 3
+    },
+    {
+      "question": "What is the smallest planet in the solar system by mass?",
+      "option_1": "Mars",
+      "option_2": "Jupiter",
+      "option_3": "Mercury",
+      "option_4": "Earth",
+      "correct_option": "3",
+      "image_url": "planet.jpg",
+      "id": 4
+    },
+    {
+      "question": "What is the visible part of the Sun called?",
+      "option_1": "Atmosphere",
+      "option_2": "Photosphere",
+      "option_3": "Lithosphere",
+      "option_4": "stratosphere",
+      "correct_option": "2",
+      "image_url": "sun.jpg",
+      "id": 5
+    },
+    {
+      "question": "Which of the following was the first artificial satellite?",
+      "option_1": "Lander Beagle",
+      "option_2": "Sputnik",
+      "option_3": "Sojourner",
+      "option_4": "Apollo 11",
+      "correct_option": "2",
+      "image_url": "satellite.jpg",
+      "id": 6
+    },
+    {
+      "question": "Which of the following space missions launched in a cooperative effort among the Soviet Union and Austria, Bulgaria, France, Hungary, the German Democratic Republic, Poland, Czechoslovakia and the Federal Republic of Germany?",
+      "option_1": "Venus Express",
+      "option_2": "Venera Mission",
+      "option_3": "Magellan Spacecraft",
+      "option_4": "Vega program",
+      "correct_option": "4",
+      "image_url": "",
+      "id": 7
+    },
+    {
+      "question": "When ISRO was established?",
+      "option_1": "15 October 1969",
+      "option_2": "15 August 1959",
+      "option_3": "15 August 1969",
+      "option_4": "15 October 1959",
+      "correct_option": "3",
+      "image_url": "isro.jpg",
+      "id": 8
+    },
+    {
+      "question": "Who was the India’s first man/women in the space?",
+      "option_1": "Kalpana Chawla",
+      "option_2": "Rajesh Sharma",
+      "option_3": "Rakesh Sharma",
+      "option_4": "Sunita Williams",
+      "correct_option": "3",
+      "image_url": "astronaut.jpg",
+      "id": 9
+    },
+    {
+      "question": "What is a group of old stars closely packed in a symmetrical form called?",
+      "option_1": "Galactic cluster",
+      "option_2": "Globular cluster",
+      "option_3": "Star cluster",
+      "option_4": "Open cluster",
+      "correct_option": "2",
+      "image_url": "",
+      "id": 10
+    },
+    {
+      "question": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Document</title>\n</head>\n<body>\n    <h1>About Us</h1>\n</body>\n</html>",
+      "option_1": "It’s round",
+      "option_2": "It’s squashed",
+      "option_3": "Rakesh Sharma",
+      "option_4": "Sunita Williams",
+      "correct_option": "1",
+      "image_url": "",
+      "id": 11
+    }
+  ]
+}
