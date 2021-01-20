@@ -1,5 +1,0 @@
-{
-    "/category/:id": "/category-:id/0",
-    "/category/:id/question-:id1": "/category-:id/:id1",
-    "/category/:id/all": "/category-:id?id_ne=0"
-}

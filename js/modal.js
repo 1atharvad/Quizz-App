@@ -13,12 +13,12 @@ $('#password, #cpassword').on('keyup', function () {
     if ($('#password').val() === $('#cpassword').val()) {
         $('#out').html("Matching");
         $('#out').css('color', 'green');
-        //$('#but').removeAttr("disabled");
+        $('#but').removeAttr("disabled");
     }
     else {
         $('#out').html("Not Matching");
         $('#out').css('color', 'red');
-        //$('#but').attr("disabled", "true");
+        $('#but').attr("disabled", "true");
     }
 });
 
@@ -34,8 +34,9 @@ $('#but').on("click", function(a) {
     //Form Validation 
     var emailReg=/^[A-Za-z0-9_]+\@[A-Za-z0-9_]+\.[A-Za-z0-9_]+/;
     var phoneReg= /[0-9]{10}/;
+    var passReg =/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
 
-    if(name !== "" && emailReg.test(email) && phoneReg.test(phone)) {
+    if(name !== "" && emailReg.test(email) && phoneReg.test(phone) && passReg.test(password)) {
         $.ajax({
             method: "POST",
             url: "http://localhost:3000/user",
@@ -51,11 +52,14 @@ $('#but').on("click", function(a) {
                 sessionStorage.setItem('username', element.name);
                 sessionStorage.setItem('admin', "false");
                 window.location.href = './';
+                $('#myform').trigger("reset");
             }
         });
     } else {
         $('#but').prop('disabled','true');
-    };
+        $('#err').html('Please Enter the values in standard format.');
+        $('#err').css('color', 'red');
+    }
 });
 
 //login form submission
@@ -118,18 +122,21 @@ $('#email').on('keyup', function () {
             $('#but').attr("disabled", "true");
             flag = 1;
             break;
-
         }
     }
     if (flag === 0) {
         $('#but').removeAttr("disabled");
         $('#inval').html("Ready to go");
         $('#inval').css('color', 'green');
-
     }
     if (email === "") {
         $('#but').attr("disabled", "true");
         $('#inval').html("enter your email");
         $('#inval').css('color', 'red');
     }
+
+    //form reset
+    $("#close").click(function () {
+        $('#myform').trigger("reset");
+    });     
 });

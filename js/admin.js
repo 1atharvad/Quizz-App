@@ -59,7 +59,7 @@ function displayQuestions(category, data) {
 
         // For Card Display
         $("#question-" + (index+1) + " .card-title").html("Question " + (index+1));
-        $("#question-" + (index+1) + " .card-text").html(question.question);
+        $("#question-" + (index+1) + " .card-text").text(question.question);
 
         // Button click for edit
         $("#question-" + (index+1) + " #update").on("click", function() {
@@ -97,7 +97,7 @@ function addDisplayModal(data) {
             }
 
             // For displaying the image
-            $("#displayModal .modal-question").html(question.question);
+            $("#displayModal .modal-question").text(question.question);
 
             // For option 1
             $("#displayModal #option_1").html(question.option_1);
