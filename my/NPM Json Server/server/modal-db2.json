@@ -29,20 +29,34 @@
     ],
     "category": [
         {
-            "category_1": "pqr",
-            "category_2": "mnvb"
-        }
+			"id": 1,
+            "name": "pqr"
+        },
+		{
+			"id": 2,
+			"name": "mnvb"
+		}
     ],
     "pqr": [
         {
             "id": 1,
-            "data": "data"
+            "question": "question",
+            "option_1": "option-1",
+            "option_2": "option_2",
+            "option_3": "option_3",
+            "option_4": "option_4",
+            "correct_option": 2
         }
     ],
     "mnvb": [
         {
             "id": 1,
-            "data": "data"
+            "question": "question",
+            "option_1": "option-1",
+            "option_2": "option_2",
+            "option_3": "option_3",
+            "option_4": "option_4",
+            "correct_option": 2
         }
     ]
 }

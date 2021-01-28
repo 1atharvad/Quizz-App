@@ -43,27 +43,33 @@
   "category": [
     {
       "id": 1,
-      "name": "Sports"
+      "name": "Sports",
+      "image_url": "sports.jpg"
     },
     {
       "id": 2,
-      "name": "Science"
+      "name": "Science",
+      "image_url": "science.jpg"
     },
     {
       "id": 3,
-      "name": "Programming-Facts"
+      "name": "Programming-Facts",
+      "image_url": "programming.jpg"
     },
     {
       "id": 4,
-      "name": "Entertainment"
+      "name": "Entertainment",
+      "image_url": "entertainment.jpg"
     },
     {
       "id": 5,
-      "name": "General-Knowledge"
+      "name": "General-Knowledge",
+      "image_url": "gk.jpg"
     },
     {
       "id": 6,
-      "name": "Space"
+      "name": "Space",
+      "image_url": "space.jpg"
     }
   ],
   "Sports": [
