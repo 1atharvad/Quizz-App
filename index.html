@@ -25,6 +25,7 @@
 
     </head>
     <body>
+        <!-- Nav Bar-->
         <nav class="navbar navbar-dark header" id="navBar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./">QuizBee</a>
@@ -73,7 +74,6 @@
                             <div class="form-group">
                                 <span id="wro"></span>
                             </div>
-
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -136,56 +136,23 @@
             <h4 class="text-center">Where a smart answer won't get you fired!</h4>
         </div>
 
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-6 col-lg-4 my-3">
-                    <div onclick="cardClick('Sports')" class="card card-size card-sports cursor-pointer">
-                        <div class="card-body text-center">
-                            <h3 class="card-text lead">Sports</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 my-3">
-                    <div onclick="cardClick('Entertainment')" class="card card-size card-entertainment cursor-pointer">
-                        <div class="card-body text-center">
-                            <h3 class="card-text lead">Entertainment</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 my-3">
-                    <div onclick="cardClick('Science')" class="card card-size card-science cursor-pointer">
-                        <div class="card-body text-center">
-                            <h3 class="card-text lead">Science</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 my-3">
-                    <div onclick="cardClick('General-Knowledge')" class="card card-size card-gk cursor-pointer">
-                        <div class="card-body text-center">
-                            <h3 class="card-text lead">General Knowledge</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 my-3">
-                    <div onclick="cardClick('Programming-Facts')" class="card card-size card-pf cursor-pointer">
-                        <div class="card-body text-center">
-                            <h3 class="card-text lead">Programming Facts</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 my-3">
-                    <div onclick="cardClick('Space')" class="card card-size card-space cursor-pointer">
-                        <div class="card-body text-center">
-                            <h3 class="card-text lead">Space</h3>
-                        </div>
+        <div class="invisible" id="card-templete" style="height: 0;">
+            <div class="col-md-6 col-lg-4 my-3" id="card_id">
+                <div class="card card-size cursor-pointer" id="card-category">
+                    <div class="card-body text-center">
+                        <h3 class="card-text lead"></h3>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="container" id="category">
+            <div class="row text-center"></div>
+        </div>
+
         <footer class="footer">
             <div class="navbar navbar-expand-lg text-center d-flex justify-content-center align-center">
-                <p>@QuizBee, 2021</p>
+                <p>&copy; QuizBee, 2021</p>
             </div>
         </footer>
     </body>

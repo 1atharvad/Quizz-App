@@ -101,52 +101,68 @@ $('.username').html(sessionStorage.getItem('username'));
     chart.draw(data, options);
     } 
 
-function categoryData(category){  
+function displayCards(categoryData){
+    var $card = $("#card-templete").html();
+    categoryData.forEach((category) => {
+        $("#category.container .row").append($card.replace("card_id", "card_"+category.id).replace("category-name", category.name));
+        
+        // Adding data and image to the card for specific category
+        $("#card_" + category.id + " .card-text").text(category.name);
+        $("#card_" + category.id + " #card-category").css("background-image", `linear-gradient(rgba(1,1,1,0.3), rgba(1,1,1,0.3)),url('../images/${category.image_url}')`);
+    });
+}
+
+function categoryData(category) {
     getCategoryData(category);
     $('scoremodal').modal('show');
 }
 
 $('#scoremodal').on('hidden.bs.modal', function () {
-$('#table tr').remove();
-$('#thead th').remove();
-
+    $('#table tr').remove();
+    $('#thead th').remove();
 })
 
 
 function getCategoryData(category){
-
-$.ajax({
-
-    method: "GET",
-
-    url: "http://localhost:3000/user",
-
-    success: function(result) {
-    let flag=0;
-        result.forEach(function(data) {
-        if(data.email === sessionemail )
-        {           
-           var $category = JSON.parse(data.category);      
-            let counter=1;
-            Object.keys($category).forEach(function(element){   
-            $category[element].forEach(function(ct){           
-            if(element === category)
-            {
-                flag=1;
-                if(counter===1)
-                $('#thead').append(" <th>ID</th><th>Score</th><th>Date</th>");
-                $('#table').append("<tr class='name'><td>"+counter+"</td><td>"+ct.score+"</td><td>"+ct.date+"</td></tr>")   ;  
-                counter+=1;
-            }           
-            })           
-            })       
-        }    
-        if(flag===0){ 
-            $('.emptyCase').show();
+    $.ajax({
+        method: "GET",
+        url: "http://localhost:3000/user",
+        success: function(result) {
+            let flag=0;
+            result.forEach(function(data) {
+            if(data.email === sessionemail ) {           
+                var $category = JSON.parse(data.category);      
+                let counter=1;
+                Object.keys($category).forEach(function(element) {   
+                    $category[element].forEach(function(ct) {           
+                        if(element === category) {
+                            flag=1;
+                            if(counter===1)
+                                $('#thead').append(" <th>ID</th><th>Score</th><th>Date</th>");
+                            $('#table').append("<tr class='name'><td>"+counter+"</td><td>"+ct.score+"</td><td>"+ct.date+"</td></tr>")   ;  
+                            counter+=1;
+                        }
+                    });
+                });
+            }
+            if (flag===0) { 
+                $('.emptyCase').show();
+            } else
+                $('.emptyCase').hide();
+            });
         }
-        else
-        $('.emptyCase').hide();
-        });
+    });
 }
-});
+
+function getCategory() {
+    $.ajax({
+        method: "GET",
+        url: "http://localhost:3000/category",
+        success: function(result) {
+            // Getting all categor data and displaying on the homepage
+            displayCards(result);
+        }
+    });
 }
+
+getCategory();
