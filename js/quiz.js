@@ -175,52 +175,52 @@ function timedCount() {
 
 // Display question
 function displayCurrentQuestion(currentQuestion) {
- 
-if(currentQuestion===0){
-  $(".preButton").prop("disabled", true);
-}
-else{
-  $(".preButton").prop("disabled", false);
-}
-if(currentQuestion===qlength-1){
-  $(".nextButton").prop("disabled", true);
-}
-else{
-  $(".nextButton").prop("disabled", false);
-}
- var question = questions[currentQuestion].question;
- var img_url=questions[currentQuestion].image_url;
- var choiceList = $(document).find(".quizContainer > .choiceList");
-  var questionClass = $(document).find(".quizContainer > .question");
-  $(questionClass).text((currentQuestion + 1) + " . " + question);
-  if(img_url.length>0){
-    $(".image").show();
-    $(".image").attr("src","./images/"+img_url)
-  }
-  else{
-    $(".image").hide();
-  }
-   $(choiceList).find("li").remove();
-  let choice1 = [];
-  var option_1 = questions[currentQuestion].option_1;
-  var option_2 = questions[currentQuestion].option_2;
-  var option_3 = questions[currentQuestion].option_3;
-  var option_4 = questions[currentQuestion].option_4;
-  choice1.push(option_1);
-  choice1.push(option_2);
-  choice1.push(option_3);
-  choice1.push(option_4);
+	// Handling the previous button
+	if (currentQuestion === 0) {
+		$(".preButton").prop("disabled", true);
+	} else {
+		$(".preButton").prop("disabled", false);
+	}
 
-  for (var i = 0; i < 4; i++) {
-    $(
-      '<li><input type="radio" class="radio-inline" value=' +
-        (i + 1) +
-        ' name="dynradio" />' +
-        " " +
-        choice1[i] +
-        "</li>"
-    ).appendTo(choiceList);
-  }
+	// Handling the next button
+	if (currentQuestion === qlength-1){
+		$(".nextButton").prop("disabled", true);
+	} else {
+		$(".nextButton").prop("disabled", false);
+	}
+	var question = questions[currentQuestion].question;
+	var img_url=questions[currentQuestion].image_url;
+	var choiceList = $(document).find(".quizContainer > .choiceList");
+	var questionClass = $(document).find(".quizContainer > .question");
+	$(questionClass).text((currentQuestion + 1) + " . " + question);
+	if(img_url.length>0){
+		$(".image").show();
+		$(".image").attr("src","./images/"+img_url)
+	}
+	else{
+		$(".image").hide();
+	}
+	$(choiceList).find("li").remove();
+	let choice1 = [];
+	var option_1 = questions[currentQuestion].option_1;
+	var option_2 = questions[currentQuestion].option_2;
+	var option_3 = questions[currentQuestion].option_3;
+	var option_4 = questions[currentQuestion].option_4;
+	choice1.push(option_1);
+	choice1.push(option_2);
+	choice1.push(option_3);
+	choice1.push(option_4);
+
+	for (var i = 0; i < 4; i++) {
+		$(
+		'<li><input type="radio" class="radio-inline" value=' +
+			(i + 1) +
+			' name="dynradio" />' +
+			" " +
+			choice1[i] +
+			"</li>"
+		).appendTo(choiceList);
+}
 }
 
 function viewResults() {
@@ -334,3 +334,113 @@ $(document).on("click", ".question_close", function (e) {
   });
   e.preventDefault();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function getCategory() {
+	if (window.location.search.split('?').length > 1) {
+		$.ajax({
+			method: "GET",
+			url: "http://localhost:3000/category",
+			success: function(result) {
+				$flag = 0;
+				for (var $i=0; $i<result.length; $i++) {
+					if (result[$i].name === window.location.search.split('?')[1].split('=')[1]) {
+						getData(result[$i].name);
+						$flag = 1;
+						break;
+					}
+				}
+				if ($flag === 0) {
+					//errorDisplay();
+				}
+			}
+		});
+	} else {
+		//errorDisplay();
+	}
+}
+
+function getData(category) {
+	$.ajax({
+		method: "GET",
+		url: "http://localhost:3000/" + category,
+		success: function(result) {
+			// If the category is found
+			startQuiz(result);
+		}
+	});
+}
+
+function questionEvent(id, questions) {
+	// Handling the previous button
+	if (id === 0) {
+		$(".previousBtn").prop("disabled", true);
+	} else {
+		$(".previousBtn").prop("disabled", false);
+	}
+
+	// Handling the next button
+	if (id === questions.length-1){
+		$(".nextBtn").prop("disabled", true);
+	} else {
+		$(".nextBtn").prop("disabled", false);
+	}
+	
+	// To display the questions and options
+	displayQuestion(questions[id]);
+}
+
+function startQuiz(questions) {
+	var questionId = 0;
+
+	questionEvent(questionId, questions);
+
+	// For previous button click
+	$(".previousBtn").on("click", () => {
+		questionId -= 1;
+		questionEvent(questionId, questions);
+	});
+
+	// For next button click
+	$(".nextBtn").on("click", () => {
+		questionId += 1;
+		questionEvent(questionId, questions);
+	});
+}
+
+function displayQuestion(question) {
+	// To display the question
+	$("#quiz-question .question").text(`${question.id}. ${question.question}`);
+
+	// To check the availability of image and then display it accordingly
+	if (question.image_url !== ""){
+		$(".image").show();
+		$(".image").attr("src", `./images/${question.image_url}`);
+	} else {
+		$(".image").hide();
+	}
+
+	// To display the options
+	var options = 4;
+	for (var i=1; i<=options; i++) {
+		$(`#quiz-question #option_${i}`).text(question[`option_${i}`]);
+	}
+}
+
+getCategory();
