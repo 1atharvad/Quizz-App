@@ -13,19 +13,122 @@ body{
   background-attachment: fixed;
 }
 
-.container { 
+section { 
     flex: 1 0 auto;
     padding: 20px;
 }
 
-.previousBtn, .nextBtn, .question_close, .submit{
-    background-color: rgb(39, 154, 231);
-    color: rgb(255, 255, 255);
-    border: 1px solid rgb(113, 105, 226);
-} 
+.questionNav{
+    margin: 2% 0 0 0;
+    width: 20%;
+    background-color: white;
+    height: 20%;
+}
+
+.questionNav h6 {
+    text-align: center;
+    background-color: #056481;
+    color: white;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.questionNav button{
+    font-size: 16px;
+}
+
+.box_image {
+    margin: 20px auto;
+}
+
+.box_image img {
+    width: 100%;
+}
 
 .options {
     background-color: #aa8bf3;
     font-size: 18px;
     color: white;
+}
+
+.option-choice {
+    background-color: rgb(46, 180, 204);
+}
+
+.previousBtn, .nextBtn, .question_close, .submitBtn, .viewBtn{
+    background-color: rgb(39, 154, 231);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(113, 105, 226);
+}
+
+/* Submit Modal for test confirmation */
+.modal-confirm {		
+    margin: 50px auto;
+}
+  
+.modal-confirm .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+.modal-confirm .modal-header {
+    border-bottom: none;   
+    position: relative;
+}
+
+.modal-confirm h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -10px;
+}
+
+.modal-confirm .close {
+    position: absolute;
+    top: -5px;
+    right: -2px;
+}
+
+.modal-confirm .modal-footer {
+    border: none;
+    text-align: center;		
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 10px 15px 25px;
+}
+
+.modal-confirm .icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 9;
+    text-align: center;
+    border: 3px solid #f15e5e;
+}
+
+.modal-confirm .icon-box span {
+    color: #f15e5e;
+    font-size: 46px;
+    display: inline-block;
+    margin-top: 2px;
+}
+
+.modal-confirm .btn, .modal-confirm .btn:active {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    min-width: 120px;
+    border: none;
+    min-height: 40px;
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+@media screen and (max-width:767px) { 
+    .questionNav{
+        display: none;
+    }  
 }

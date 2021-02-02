@@ -30,8 +30,8 @@ $(document).ready(function () {
       },
       complete: function () {
         displayCurrentQuestion(currentQuestion);
-        navButtons();
-        timedCount();
+        //navButtons();
+        //timedCount();
       }
     });
   }
@@ -42,12 +42,7 @@ $(document).ready(function () {
   
   });
 
-  //
-  function navButtons() {
-    for (var i = 0; i < qlength; i++) {
-      $(".questionNo").append(`<button id=${i }>${i +1}</button`);
-    }
-  }
+  //}
 
   // previous Question button
   $(this)
@@ -350,7 +345,7 @@ $(document).on("click", ".question_close", function (e) {
 
 
 
-
+var selectedOptions = {};
 
 function getCategory() {
 	if (window.location.search.split('?').length > 1) {
@@ -382,9 +377,16 @@ function getData(category) {
 		url: "http://localhost:3000/" + category,
 		success: function(result) {
 			// If the category is found
+			$("#quiz-name").text(category);
+			navButtons(result);
 			startQuiz(result);
 		}
 	});
+}
+
+function navButtons(questions) {
+	console.log(questions)
+    
 }
 
 function questionEvent(id, questions) {
@@ -404,23 +406,65 @@ function questionEvent(id, questions) {
 	
 	// To display the questions and options
 	displayQuestion(questions[id]);
+	return id;
 }
 
 function startQuiz(questions) {
 	var questionId = 0;
 
+	// To start the time and assigning 1 minute per question
+	startTimer(60*questions.length, questions);
 	questionEvent(questionId, questions);
 
 	// For previous button click
 	$(".previousBtn").on("click", () => {
-		questionId -= 1;
-		questionEvent(questionId, questions);
+		questionId = questionEvent(questionId-1, questions);
 	});
 
 	// For next button click
 	$(".nextBtn").on("click", () => {
-		questionId += 1;
-		questionEvent(questionId, questions);
+		questionId = questionEvent(questionId+1, questions);
+	});
+
+	for (var i=1; i<=questions.length; i++) {
+		$(".questionNav #questionNo").append(`<button type="button" class="btn btn-light" id="${i}">${i}</button>`);
+	  	$(`.questionNav #questionNo #${i}`).on("click", function() {
+			questionId = questionEvent($(this).attr('id')-1, questions);
+		});
+	}
+
+	// Button click for all the options of the question
+	var options = 4;
+	for (var i=1; i<=options; i++) {
+		$(`#quiz-question #option_${i}`).on("click", function() {
+			var option = $(this).attr('id').split("option_")[1];
+			selectedOptions[questionId+1] = option;
+			queryOption(option);
+			queryQuestion(questionId+1);
+		});
+	}
+}
+
+function startTimer(time, questions) {
+	// Executes the function every one second and decrements the timer by one second.
+	var timer = setInterval(() => {
+		var hours = parseInt(time/3600) % 24;
+		var minutes = parseInt(time/60) % 60;
+		var seconds = time % 60;
+
+		$("#quiz-question #timer").html(`${hours < 10 ? "0" + hours : hours}:${minutes < 10 ? "0" + minutes : minutes}:${seconds < 10 ? "0" + seconds : seconds}`);
+		
+		// When timer is over stop the timer and exit
+		if (time === 0) {
+			clearInterval(timer);
+		}
+		time--;
+	}, 1000);
+
+	// When the submit button is clicked the timer stops
+	$("#submitModal #submitTest").on("click", () => {
+		clearInterval(timer);
+		calculateScore(questions);
 	});
 }
 
@@ -430,11 +474,14 @@ function displayQuestion(question) {
 
 	// To check the availability of image and then display it accordingly
 	if (question.image_url !== ""){
-		$(".image").show();
-		$(".image").attr("src", `./images/${question.image_url}`);
+		$("#quiz-question img").show();
+		$("#quiz-question img").attr("src", `./images/${question.image_url}`);
 	} else {
-		$(".image").hide();
+		$("#quiz-question img").hide();
 	}
+
+	// Selects the user choice if choosen else clears the option board
+	queryOption(selectedOptions[question.id]);
 
 	// To display the options
 	var options = 4;
@@ -442,5 +489,87 @@ function displayQuestion(question) {
 		$(`#quiz-question #option_${i}`).text(question[`option_${i}`]);
 	}
 }
+
+// To handle the option button click functionalities
+function queryOption(option) {
+	var options = 4;
+	for (var i=1; i<=options; i++) {
+		// To remove the previously added choice option class
+        // If no choice option class, do not remove that class
+		$(`#quiz-question #option_${i}`).removeClass(function() {
+			var $class = $(this).attr("class").split(" ").pop();
+			if ($class === "option-choice") {
+				return $class;
+			} else {
+				return "";
+			}
+		});
+	}
+
+	// If any option is selected then add class for showing the selected option
+	if (option !== undefined) {
+		$(`#quiz-question #option_${option}`).addClass("option-choice");
+	}
+}
+
+
+// If an option is choosen of a question, then that question in the nav bar is highligted
+// with blue color
+function queryQuestion(id) {
+	$(`#questionNo #${id}`).removeClass(function() {
+		var $class = $(this).attr("class").split(" ").pop();
+		if ($class === "btn-light") {
+			$(`#questionNo #${id}`).addClass("btn-info");
+			return $class;
+		} else {
+			return "";
+		}
+	});
+}
+
+function calculateScore(questions) {
+	var score = 0;
+	Object.keys(selectedOptions).forEach((questionId) => {
+		if (questions[questionId-1].correct_option === selectedOptions[questionId]) {
+			score++;
+		}
+	});
+}
+
+function viewScore() {
+	$("#quiz-page").hide();
+
+	//// To be done
+	if(correctAnswers===0){
+	
+	  $(".image").attr("src","./images/shocked.png");
+	}
+	else if(correctAnswers>0 && correctAnswers<4){
+	
+	  $(".image").attr("src","./images/sad.png");
+	} 
+	else if(correctAnswers>=4 && correctAnswers<7){
+	  $(".image").attr("src","./images/smile.png");
+	}
+	else{
+	  
+	  $(".image").attr("src","./images/emoji.png");
+	}
+  
+  
+	//$(".image").hide();
+	$(".questionNav").hide();
+	quizOver = true;
+	  $(".question").hide();
+	  $(".choiceList").hide();
+	  $(document).find(".preButton").text("View Answer");
+	  $(".preButton").prop("disabled", false);
+	  $(".submit").hide();
+	  $("#timer").hide();
+	  //$(document).find(".nextButton").text("Close");
+	 $(".nextButton").hide();
+	
+	  return false;
+  }
 
 getCategory();
