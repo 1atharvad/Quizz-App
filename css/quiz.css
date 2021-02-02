@@ -55,10 +55,23 @@ section {
     background-color: rgb(46, 180, 204);
 }
 
-.previousBtn, .nextBtn, .question_close, .submitBtn, .viewBtn{
+.correct-choice {
+    background-color: rgb(46, 204, 85);
+}
+
+.wrong-choice {
+    background-color: rgb(196, 76, 39);
+}
+
+.previousBtn, .nextBtn, .backBtn, .submitBtn, .viewBtn{
     background-color: rgb(39, 154, 231);
     color: rgb(255, 255, 255);
     border: 1px solid rgb(113, 105, 226);
+}
+
+.resultQuestion {
+    width: 70%;
+    margin: 40px auto;
 }
 
 /* Submit Modal for test confirmation */

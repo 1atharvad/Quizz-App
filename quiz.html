@@ -71,15 +71,17 @@
 						<div class="box_image" style="width: 90%;">
 							<img class="rounded" src="" alt="Question Image">
 						</div>
-						<h5 class="question"></h5>
-						<div class="container">
-							<div class="row">
-								<button id="option_1" class="btn col-sm rounded p-3 m-1 options text-center"></button>
-								<button id="option_2" class="btn col-sm rounded p-3 m-1 options text-center"></button>
-							</div>
-							<div class="row">
-								<button id="option_3" class="btn col-sm rounded p-3 m-1 options text-center"></button>
-								<button id="option_4" class="btn col-sm rounded p-3 m-1 options text-center"></button>
+						<div id="questionaire">
+							<h5 class="question mb-4"></h5>
+							<div class="container">
+								<div class="row">
+									<button id="option_1" class="btn col-sm rounded p-3 m-1 options text-center"></button>
+									<button id="option_2" class="btn col-sm rounded p-3 m-1 options text-center"></button>
+								</div>
+								<div class="row">
+									<button id="option_3" class="btn col-sm rounded p-3 m-1 options text-center"></button>
+									<button id="option_4" class="btn col-sm rounded p-3 m-1 options text-center"></button>
+								</div>
 							</div>
 						</div>
 
@@ -94,22 +96,38 @@
 			</div>
 		</section>
 
+		<!-- To display the scores of that quiz -->
 		<section id="score-card">
-			<div class="card mx-5">
+			<div class="card mx-sm-5 my-5">
 				<div class="card-body card-bk-color my-3">
 					<div class="card-title text-center">
 						<div class="h1">Score</div>
 					</div>
 					<hr/>
 					<div class="box_image" style="width: 30%;">
-						<img src="./images/shocked.png" alt="Emogi">
+						<img src="" alt="Emogi">
 					</div>
 
-					<div class="text-success text-center" style="font-size: 22px;" id="result">hello</div>
+					<div class="text-success text-center display-3 mt-3" id="result"></div>
 
 					<hr/>
 					<div class="d-flex justify-content-center">
 						<button class="btn viewBtn">View Result</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="display-result">
+			<div class="card mx-sm-5 my-5">
+				<div class="card-body card-bk-color my-3">
+					<div class="card-title text-center">
+						<div class="h1">Result</div>
+					</div>
+					<hr/>
+					<div id="display-questions"></div>
+					<div class="d-flex justify-content-center">
+						<button class="btn backBtn">Back To Homepage</button>
 					</div>
 				</div>
 			</div>
